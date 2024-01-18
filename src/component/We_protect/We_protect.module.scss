@@ -1,0 +1,190 @@
+@keyframes money {
+  0% {
+    top: 8px;
+    height: 0px;
+    left: 8px;
+  }
+
+  40% {
+  }
+  55% {
+  }
+  100% {
+    height: 32px;
+  }
+}
+@keyframes hourglass_clear {
+  0% {
+  }
+  50% {
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hourglass_send {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+
+    transform: translateY(-10px) rotate3d(1, 0, 0, 180deg);
+  }
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+  }
+}
+
+.We_protect {
+  font-family: "Manrope";
+  .wrapper {
+    max-width: 1240px;
+    margin: auto;
+    .We_protect_row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .content {
+        .content_label {
+          margin-bottom: 40px;
+          .label {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 125%; /* 50px */
+            margin-bottom: 12px;
+          }
+          .sub_label {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 125%;
+          }
+        }
+        .content_row {
+          .card {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            &:nth-child(1) {
+              &::after {
+                content: "";
+                background-image: url(../../../public/image/We_protect/line.svg);
+                position: absolute;
+                height: 105px;
+                width: 5px;
+                top: 63px;
+                left: 33.5px;
+              }
+            }
+
+            &:hover {
+            /*   .card_image {
+                &::after,
+                &::before {
+                  transform: translate(5px, -5px ) rotate( -5deg);
+                }
+              } */
+              .money_and_back_1 {
+                animation: money 0.7s linear 1;
+              }
+              .hourglass_clear {
+                animation: hourglass_clear 1.5s linear 1;
+              }
+              .hourglass_send {
+                animation: hourglass_send 1.5s linear 1;
+              }
+            }
+
+            &:nth-child(1) {
+              margin-bottom: 30px;
+            }
+            .card_image {
+              padding: 25px;
+              border-radius: 50%;
+              border: 10px solid #2d8eee;
+              width: 32px;
+              height: 32px;
+              position: absolute;
+                top:-10px;
+                left: 0px;
+              margin-right: 65px;
+              &::after,
+              &::before {
+                content: "";
+                transition-duration: .3s;
+                position: absolute;
+                background-color: #2d8eee;
+                z-index: 5;
+              }
+              &::after {
+                top: 20px;
+                left: 50px;
+                height: 10px;
+                width: 32px;
+              }
+              &::before {
+                top: 10px;
+                left: 70px;
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+              }
+              .money_and_back_1 {
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                z-index: 2;
+                transition-duration: 0.3s;
+              }
+              .hourglass_clear {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+              }
+              .hourglass_send {
+                position: absolute;
+                top: 29px;
+                left: 20px;
+              }
+            }
+            .card_information {
+                margin-left: 135px;
+              .card_name_block {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                .card_count {
+                  font-size: 24px;
+                  font-weight: 600;
+                  line-height: 150%;
+                  border-radius: 10px;
+                  background: #2d8eee;
+                  padding: 6px 11px;
+                  margin-right: 20px;
+                }
+                .card_name {
+                  font-size: 24px;
+                  font-weight: 600;
+                  line-height: 150%;
+                }
+              }
+              .card_text {
+                max-width: 670px;
+                color: #b1b1b1;
+                text-align: justify;
+                font-family: "Open Sans";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
