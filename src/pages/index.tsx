@@ -8,12 +8,27 @@ import What_sites_we_develop from '@/component/What_sites_we_develop/What_sites_
 import Tehnology from '@/component/Tehnology/Tehnology'
 import We_protect from '@/component/We_protect/We_protect'
 import Why_choose_us from '@/component/Why_choose_us/Why_choose_us'
+import What_services_we_offer from '@/component/What_services_we_offer/What_services_we_offer'
+import Why_cooperate_with_us from '@/component/Why_cooperate_with_us/Why_cooperate_with_us'
+import What_you_get from '@/component/What_you_get/What_you_get'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main>
+      <section>
+      <What_you_get/>
+
+      </section>
+      <section>
+      <Why_cooperate_with_us/>
+
+      </section>
+       <section>
+      <What_services_we_offer/>
+
+      </section>
         <section>
       <We_protect/>
 
@@ -30,6 +45,10 @@ export default function Home() {
 
       </section> <section>
       <What_sites_we_develop/>
+
+      </section>
+      <section>
+      <First_main_screen/>
 
       </section>
     

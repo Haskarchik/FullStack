@@ -1,0 +1,129 @@
+@keyframes check_arrow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes clipboard {
+  0% {
+    opacity: 0;
+    z-index: 2;
+  }
+  50% {
+   opacity: 0;
+   top: 20px;
+   z-index: 2;
+  }
+  90%{
+    
+  }
+  100% {z-index: 2;
+   top: 0px;
+   opacity: 1;
+  }
+}
+@keyframes clipboard_top {
+  0% {
+    opacity: 0;
+  }
+  50% {
+   opacity: 0;
+   top: 10px;
+  }
+  80%{
+    opacity: 0;
+  }
+  100% {
+   top: 0px;
+   opacity: 1;
+  }
+}
+.What_services_we_offer{
+  margin-bottom: 140px;
+}
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  .label {
+    text-align: center;
+    font-family: "Manrope";
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 40px;
+  }
+  .service_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .service_card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        .pencil {
+          transform: rotate(360deg);
+        }
+        .check_arrow {
+          animation: check_arrow 1s linear 1;
+        }
+        .clipboard_clear{
+          animation: clipboard 0.5s linear 1;
+
+        }
+        .clipboard_top{
+          animation: clipboard_top .6s linear 1;
+
+        }
+
+      }
+      .card_image {
+        margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        .pencil {
+          transition-duration: 0.5s;
+        }
+        .check_arrow {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+        .clipboard_top {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+        .clipboard_clear {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+         
+        }
+      }
+      .card_label {
+        font-family: "Manrope";
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 150%; /* 36px */
+        margin-bottom: 5px;
+      }
+      .card_text {
+        color: var(--dark-grey, #b1b1b1);
+        text-align: center;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%; /* 22.4px */
+        max-width: 390px;
+      }
+    }
+  }
+}
