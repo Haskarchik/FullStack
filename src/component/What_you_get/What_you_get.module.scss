@@ -1,3 +1,131 @@
+@keyframes rocket_fire {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(3px, 3px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(-3px, -3px) rotate(10deg);
+  }
+  75% {
+    transform: translate(3px, 3px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+@keyframes line {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #2d8eee;
+  }
+}
+@keyframes money {
+  0% {
+    top: -15px;
+    transform: scaleX(0.4);
+  }
+  50% {
+    transform: scale(1.1, 0.4);
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes card {
+  0% {
+    left: -30px;
+    opacity: 0;
+  }
+  50% {
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes notebook_note {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  50% {
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shield_Daw {
+  0% {
+    opacity: 0;
+  }
+  50% {
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+@keyframes lighting {
+  0% {
+    top: -50px;
+    transform: scale(0.3);
+    opacity: 0.3;
+  }
+  50% {
+  }
+  100% {
+    transform: scaleX(1);
+
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+  }
+}
+@keyframes head {
+  0% {
+    top: -20px;
+    transform: scaleX(0.5);
+  }
+  50% {
+    top: 0px;
+    transform: scaleX(0.8);
+
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+@keyframes some_bottom {
+  0% {
+    top: -20px;
+    opacity: 0;
+  }
+  50% {
+  }
+  100% {
+    top: 0px;
+
+    opacity: 1;
+  }
+}
+@keyframes some_gear {
+  0% {
+  }
+  50% {
+    top: 2px;
+    transform: scale(1.2);
+  }
+  100% {
+  }
+}
 .What_you_get {
   margin-bottom: 140px;
   .wrapper {
@@ -22,6 +150,7 @@
         align-items: center;
         justify-content: center;
         max-width: 280px;
+
         .card_row {
           display: flex;
           align-items: flex-start;
@@ -35,12 +164,105 @@
             justify-content: center;
           }
           .card_image {
+            position: relative;
+
             img {
               width: 40px;
               height: 40px;
             }
-
             margin-right: 15px;
+            .money {
+              position: relative;
+            }
+            .card {
+              position: relative;
+            }
+            .man_head {
+              position: relative;
+            }
+            .rocket_fire {
+              transition-duration: 0.2s;
+              opacity: 1;
+              position: absolute;
+              top: 15px;
+              left: -15px;
+            }
+            .rocket_active_fire {
+              transition-duration: 0.2s;
+              opacity: 0;
+              position: absolute;
+              top: 16px;
+              left: -17px;
+            }
+            .notebook_note {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+            .shield_Daw {
+              transition-duration: 0.3s;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+            .lighting {
+              position: relative;
+            }
+            .man {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+            .some_gear {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+            .some_bottom {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+          }
+          &:hover {
+            .card_label{
+              animation: line 0.7s linear 1;
+              
+            }
+            .money {
+              animation: money 0.7s linear 1;
+            }
+            .card {
+              animation: card 0.7s linear 1;
+            }
+            .notebook_note {
+              animation: notebook_note 0.7s linear 1;
+            }
+            .rocket_active_fire {
+              opacity: 1;
+              animation: rocket_fire 0.7s linear 3;
+            }
+
+            .rocket_fire {
+              opacity: 0;
+              animation: rocket_fire 0.7s linear 3;
+            }
+            .shield_Daw {
+              animation: shield_Daw 0.7s linear 1;
+              transform: scale(1.3);
+            }
+            .lighting {
+              animation: lighting 0.3s linear 1;
+            }
+            .man_head {
+              animation: head 0.7s linear 1;
+            }
+            .some_bottom {
+              animation: some_bottom 0.7s linear 1;
+            }
+            .some_gear {
+              animation: some_gear 0.7s linear 1;
+            }
           }
           .card_label {
             max-width: 223px;

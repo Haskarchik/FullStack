@@ -116,6 +116,7 @@
       margin-bottom: 40px;
     }
     .Why_choose_us_block_row {
+      overflow: hidden;
       display: flex;
 
       .cards_row {
@@ -129,7 +130,33 @@
           box-sizing: content-box;
           padding-left: 20px;
           width: 360px;
+          position: relative;
+          &::after,
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 7px;
+            background-color: #2d8eee;
+            border-radius: 5px;
+            width: 2px;
+            height: 80px;
+           
+          }
+          &::after {
+            top: 95px;
+
+          }
+          &::before {
+            top: -21px;
+            
+          }
           &:hover {
+            .card_text{
+              &::after,&::before{
+                background-color: #96caff;
+              }
+            }
             .money {
               animation: money 0.5s linear 1;
             }
@@ -170,7 +197,10 @@
             height: 40px;
             margin-bottom: 10px;
             position: relative;
-
+  img {
+            height: 40px;
+            width: 40px;
+          }
             .money_currency {
               position: absolute;
               top: 0px;
@@ -251,20 +281,26 @@
             position: relative;
             &::after,
             &::before {
-              content: "";
+            transition-duration: 0.3s;
+            content: "";
               position: absolute;
-              top: 0px;
-              left: 0px;
+              top: -14px;
+              left: -20px;
               background-color: #2d8eee;
               border-radius: 50%;
-              width: 12px;
-              height: 12px;
+              width: 15px;
+              height: 15px;
+             
             }
             &::after {
-              border: 2px solid #2d8eee;
+              top: -12.5px;
+              left: -18.5px;
+              width: 12px;
+              height: 12px;
+              border: 2px solid #081522;
             }
             &::before {
-              padding: 2px;
+              
             }
           }
         }

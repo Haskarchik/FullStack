@@ -11,12 +11,17 @@ import Why_choose_us from '@/component/Why_choose_us/Why_choose_us'
 import What_services_we_offer from '@/component/What_services_we_offer/What_services_we_offer'
 import Why_cooperate_with_us from '@/component/Why_cooperate_with_us/Why_cooperate_with_us'
 import What_you_get from '@/component/What_you_get/What_you_get'
+import What_do_SEO from '@/component/What_do_SEO/What_do_SEO'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main>
+        <section>
+      <What_do_SEO/>
+
+      </section>
       <section>
       <What_you_get/>
 
