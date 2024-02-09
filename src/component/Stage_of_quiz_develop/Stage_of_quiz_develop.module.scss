@@ -4,11 +4,26 @@
     max-width: 1240px;
     margin: auto;
     .label {
-      text-align: center;
-      font-family: "Manrope";
-      font-size: 40px;
+      font-family: "Manrope", sans-serif;
       font-weight: 600;
-      line-height: 125%; /* 50px */
+      font-size: 40px;
+      line-height: 125%;
+      text-align: center;
+      color: #f0f0f0;
+      margin-bottom: 15px;
+    }
+    .sub_label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 125%;
+      text-align: center;
+      color: #b1b1b1;
+      max-width: 820px;
+      margin: auto;
       margin-bottom: 40px;
     }
     .graphik {
@@ -34,170 +49,78 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 320px;
-
+        height: 175px;
+        width: 150px;
         &::after,
         &::before {
           content: "";
           position: absolute;
-          top: 160px;
+          top: 85px;
           left: 7px;
           background-color: #2d8eee;
           border-radius: 5px;
-          width: 150px;
+          width: 180px;
           height: 2px;
         }
         &::after {
-          left: 140px;
+          left: 100px;
         }
         &::before {
-          left: -40px;
+          left: -60px;
         }
         &:hover {
-          .face {
-            transform: rotateY(180deg);
-          }
-          .speaker_right_part {
-            animation: speaker 1s linear 1;
-          }
-          .speaker_left_part {
-            animation: speaker_left 1s linear 1;
-          }
-          .statistics {
-            animation: statistics 1s linear 1;
-          }
-          .statistics_line {
-            animation: statistics_line 1s linear 1;
-          }
-          .gear {
-            transform: rotate(180deg);
-          }
-          .card_img {
+          .card_count {
             &::after,
             &::before {
               background-color: #96caff;
             }
           }
         }
-        .card_img {
-          margin-bottom: 12px;
-          position: relative;
-          &::after,
+        .number {
+          counter-reset: count 0;
+        }
+
+        .number::after {
+          content: counter(count);
+          animation: count-up 0.3s linear infinite;
+        }
+
+        @keyframes count-up {
+          0% {
+            counter-increment: count 0;
+          }
+          to {
+            counter-increment: count 01;
+          }
+        }
+        .card_label {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 120%;
+          text-align: center;
+          color: #f0f0f0;
+        }
+        .card_count {
+          margin-bottom: 5px;
+          font-family: "Manrope", sans-serif;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 125%;
+          color: #2d8eee;
           &::before {
             transition-duration: 0.3s;
             content: "";
             position: absolute;
-            top: 154px;
-            left: 10px;
+            top: 75px;
+            left: 41%;
             background-color: #2d8eee;
             border-radius: 50%;
-            width: 15px;
-            height: 15px;
-          }
-          &::after {
-            top: 155.5px;
-            left: 11.5px;
-            width: 12px;
-            height: 12px;
-            border: 2px solid #081522;
-          }
-
-          img {
-            position: relative;
-            height: 40px;
-            width: 40px;
-            object-fit: contain;
-          }
-          .face {
-            transition-duration: 0.5s;
-          }
-          .face_board {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-          }
-          .statistics_line {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-          }
-          .statistics {
-          }
-          .speaker_left_part {
-          }
-          .speaker_right_part {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-          }
-          .gear {
-            transition-duration: 1s;
+            width: 24px;
+            height: 24px;
           }
         }
-        .card_label {
-          max-width: 254px;
-          color: var(--light-grey, #d4d4d4);
-          text-align: center;
-          font-family: "Manrope";
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 125%;
-          height: 90px;
-        }
-      }
-    }
-    .images {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      img {
-        border-radius: 10px;
-        width: 600px;
-        height: 256px;
-        object-fit: cover;
       }
     }
   }
 }
-@keyframes speaker {
-  0% {
-  }
-  20% {
-    transform: scale(1.5) translate(5px, 00px);
-  }
-  30% {
-    transform: scale(1.5) translate(5px, 00px) rotate(20deg);
-  }
-  50% {
-    transform: scale(1.5) translate(5px, 00px) rotate(-20deg);
-  }
-  80% {
-    transform: scale(1.5) translate(5px, 00px) rotate(20deg);
-  }
-  100% {
-  }
-}
-@keyframes speaker_left {
-  0% {
-  }
-  50% {
-    transform: scale(1.2) translate(0px, 00px) /* rotate(20deg) */;
-  }
-  100% {
-  }
-}
-@keyframes statistics {
-  from {
-    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%); 
-  }
-  to {
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-  }
-}
-@keyframes statistics_line {
-  from {
-    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
-  }
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }}

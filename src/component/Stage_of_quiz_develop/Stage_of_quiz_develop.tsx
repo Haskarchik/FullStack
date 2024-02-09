@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Stage_of_quiz_develop.module.scss";
 import Stage_of_quiz_develop_card from "./Stage_of_quiz_develop_card";
 
 export default function Stage_of_quiz_develop() {
+
+
+
+
   return (
     <div className={style.Stage_of_quiz_develop}>
       <div className={style.wrapper}>
-        <div className={style.label}>
-          Які задачі вирішує ЅЕO-просування сайту
+        <div className={style.label}>6 етапів розробки квізу</div>
+        <div className={style.sub_label}>
+          Використовуємо ряд перевірених методик, системно побудованих процесів
+          і алгоритмів в комплексі з інноваційними технологіями, щоб створити
+          якісний quiz, який сподобається і вам, і користувачам і ефективно
+          вирішить бізнес- завдання.
         </div>
         <div className={style.graphik}>
           <Stage_of_quiz_develop_card
