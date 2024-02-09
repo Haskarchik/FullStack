@@ -75,24 +75,26 @@
               background-color: #96caff;
             }
           }
+          .number,.one {
+            background-color: white;
+
+            /*   .number::after {
+                content: counter(count);
+
+                animation: count1 0.5s linear 1;
+              } */
+          }
         }
         .number {
-          counter-reset: count 0;
-        }
-
-        .number::after {
-          content: counter(count);
-          animation: count-up 0.3s linear infinite;
-        }
-
-        @keyframes count-up {
-          0% {
+          &::after {
             counter-increment: count 0;
+            content: counter(count);
           }
-          to {
-            counter-increment: count 01;
-          }
+
+          counter-increment: count 0;
+          content: counter(count);
         }
+
         .card_label {
           font-family: "Open Sans", sans-serif;
           font-weight: 400;
@@ -108,6 +110,7 @@
           font-size: 18px;
           line-height: 125%;
           color: #2d8eee;
+       
           &::before {
             transition-duration: 0.3s;
             content: "";
@@ -122,5 +125,62 @@
         }
       }
     }
+  }
+}
+@keyframes count1 {
+  0% {
+    counter-increment: count 0;
+  }
+  100% {
+    counter-increment: count 01;
+  }
+}
+@keyframes count2 {
+  0% {
+    counter-increment: count 0;
+  }
+  50% {
+    counter-increment: count 01;
+  }
+  100% {
+    counter-increment: count 02;
+  }
+}
+@keyframes count3 {
+  0% {
+    counter-increment: count 0;
+  }
+  33% {
+    counter-increment: count 01;
+  }
+  66% {
+    counter-increment: count 01;
+  }
+  100% {
+    counter-increment: count 03;
+  }
+}
+@keyframes count1 {
+  0% {
+    counter-increment: count 0;
+  }
+  100% {
+    counter-increment: count 01;
+  }
+}
+@keyframes count1 {
+  0% {
+    counter-increment: count 0;
+  }
+  100% {
+    counter-increment: count 01;
+  }
+}
+@keyframes count1 {
+  0% {
+    counter-increment: count 0;
+  }
+  100% {
+    counter-increment: count 01;
   }
 }

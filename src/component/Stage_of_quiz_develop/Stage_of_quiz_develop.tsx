@@ -19,42 +19,51 @@ export default function Stage_of_quiz_develop() {
         </div>
         <div className={style.graphik}>
           <Stage_of_quiz_develop_card
+          
+          styleName = {'one'}
             count="01"
             content="flex-start"
             name="Розробка технічного
             завдання"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
+          styleName = {'two'}
+
             count="02"
             content="flex-end"
             name="Розробка прототипу 
             і запитань до квізу"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-            count="03"
+          styleName ={'thri'}
+          count="03"
             content="flex-start"
             name="Розробка дизайну 
             сайту"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-            count="04"
+          styleName = {'four'}
+          count="04"
             content="flex-end"
             name="Налаштування 
             контекстної реклами"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-            count="05"
+          styleName = {'five'}
+          count="05"
             content="flex-start"
             name="Розробка функціоналу
             сайту"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-            count="06"
+          styleName = {'six'}
+          count="06"
             content="flex-end"
             name="Реліз проєкту"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-            count="07"
+          styleName = {'seven'}
+          count="07"
             content="flex-start"
             name="Супровід і 
             оптимізація"
