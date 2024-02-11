@@ -1,12 +1,7 @@
-import React, { useState } from "react";
 import style from "./Stage_of_quiz_develop.module.scss";
 import Stage_of_quiz_develop_card from "./Stage_of_quiz_develop_card";
 
 export default function Stage_of_quiz_develop() {
-
-
-
-
   return (
     <div className={style.Stage_of_quiz_develop}>
       <div className={style.wrapper}>
@@ -19,51 +14,42 @@ export default function Stage_of_quiz_develop() {
         </div>
         <div className={style.graphik}>
           <Stage_of_quiz_develop_card
-          
-          styleName = {style.one}
-            count="01"
+            styleName={style.one}
             content="flex-start"
             name="Розробка технічного
             завдання"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-          styleName = {style.two}
-
-            count="02"
+            styleName={style.two}
             content="flex-end"
             name="Розробка прототипу 
             і запитань до квізу"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-          styleName ={style.thri}
-          count="03"
+            styleName={style.thri}
             content="flex-start"
             name="Розробка дизайну 
             сайту"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-          styleName = {style.four}
-          count="04"
+            styleName={style.four}
             content="flex-end"
             name="Налаштування 
             контекстної реклами"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-          styleName = {style.five}
-          count="05"
+            styleName={style.five}
             content="flex-start"
             name="Розробка функціоналу
             сайту"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-          styleName = {style.six}
-          count="06"
+            styleName={style.six}
             content="flex-end"
             name="Реліз проєкту"
           ></Stage_of_quiz_develop_card>
           <Stage_of_quiz_develop_card
-          styleName = {style.seven}
-          count="07"
+            styleName={style.seven}
             content="flex-start"
             name="Супровід і 
             оптимізація"

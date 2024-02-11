@@ -105,38 +105,49 @@
             counter-increment: count 07;
           }
         }
-        .number {
+
+        .one {
+          counter-increment: count 01;
           &::after {
-           
             content: counter(count);
           }
-          .one {
-          
-            counter-increment: count 01;
-          
-          }
-          .two {
-            counter-increment: count 02;
-          }
-          .thri {
-            counter-increment: count 03;
-          }
-          .four {
-            counter-increment: count 04;
-          }
-          .five {
-            counter-increment: count 05;
-          }
-          .six {
-            counter-increment: count 06;
-          }
-          .seven {
-            counter-increment: count 07;
-          }
-      
-       
         }
-       
+        .two {
+          counter-increment: count 02;
+          &::after {
+            content: counter(count);
+          }
+        }
+        .thri {
+          counter-increment: count 03;
+          &::after {
+            content: counter(count);
+          }
+        }
+        .four {
+          counter-increment: count 04;
+          &::after {
+            content: counter(count);
+          }
+        }
+        .five {
+          counter-increment: count 05;
+          &::after {
+            content: counter(count);
+          }
+        }
+        .six {
+          counter-increment: count 06;
+          &::after {
+            content: counter(count);
+          }
+        }
+        .seven {
+          counter-increment: count 07;
+          &::after {
+            content: counter(count);
+          }
+        }
 
         .card_label {
           font-family: "Open Sans", sans-serif;
