@@ -75,25 +75,68 @@
               background-color: #96caff;
             }
           }
-          .number,.one {
-            background-color: white;
 
-            /*   .number::after {
-                content: counter(count);
-
-                animation: count1 0.5s linear 1;
-              } */
+          .one {
+            animation: count1 0.5s linear 1;
+            counter-increment: count 01;
+          }
+          .two {
+            animation: count2 0.5s linear 1;
+            counter-increment: count 02;
+          }
+          .thri {
+            animation: count3 0.5s linear 1;
+            counter-increment: count 03;
+          }
+          .four {
+            animation: count4 0.5s linear 1;
+            counter-increment: count 04;
+          }
+          .five {
+            animation: count5 0.5s linear 1;
+            counter-increment: count 05;
+          }
+          .six {
+            animation: count6 0.5s linear 1;
+            counter-increment: count 06;
+          }
+          .seven {
+            animation: count7 0.5s linear 1;
+            counter-increment: count 07;
           }
         }
         .number {
           &::after {
-            counter-increment: count 0;
+           
             content: counter(count);
           }
-
-          counter-increment: count 0;
-          content: counter(count);
+          .one {
+          
+            counter-increment: count 01;
+          
+          }
+          .two {
+            counter-increment: count 02;
+          }
+          .thri {
+            counter-increment: count 03;
+          }
+          .four {
+            counter-increment: count 04;
+          }
+          .five {
+            counter-increment: count 05;
+          }
+          .six {
+            counter-increment: count 06;
+          }
+          .seven {
+            counter-increment: count 07;
+          }
+      
+       
         }
+       
 
         .card_label {
           font-family: "Open Sans", sans-serif;
@@ -110,7 +153,7 @@
           font-size: 18px;
           line-height: 125%;
           color: #2d8eee;
-       
+
           &::before {
             transition-duration: 0.3s;
             content: "";
@@ -129,7 +172,7 @@
 }
 @keyframes count1 {
   0% {
-    counter-increment: count 0;
+    counter-increment: count 00;
   }
   100% {
     counter-increment: count 01;
@@ -137,7 +180,7 @@
 }
 @keyframes count2 {
   0% {
-    counter-increment: count 0;
+    counter-increment: count 00;
   }
   50% {
     counter-increment: count 01;
@@ -148,7 +191,7 @@
 }
 @keyframes count3 {
   0% {
-    counter-increment: count 0;
+    counter-increment: count 00;
   }
   33% {
     counter-increment: count 01;
@@ -160,27 +203,89 @@
     counter-increment: count 03;
   }
 }
-@keyframes count1 {
+@keyframes count4 {
   0% {
-    counter-increment: count 0;
+    counter-increment: count 00;
+  }
+  25% {
+    counter-increment: count 01;
+  }
+  50% {
+    counter-increment: count 02;
+  }
+  75% {
+    counter-increment: count 03;
   }
   100% {
-    counter-increment: count 01;
+    counter-increment: count 04;
   }
 }
-@keyframes count1 {
+@keyframes count5 {
   0% {
-    counter-increment: count 0;
+    counter-increment: count 00;
+  }
+  20% {
+    counter-increment: count 01;
+  }
+  40% {
+    counter-increment: count 02;
+  }
+  60% {
+    counter-increment: count 03;
+  }
+  80% {
+    counter-increment: count 04;
   }
   100% {
-    counter-increment: count 01;
+    counter-increment: count 05;
   }
 }
-@keyframes count1 {
+@keyframes count6 {
   0% {
-    counter-increment: count 0;
+    counter-increment: count 00;
+  }
+  16% {
+    counter-increment: count 01;
+  }
+  32% {
+    counter-increment: count 02;
+  }
+  48% {
+    counter-increment: count 03;
+  }
+  64% {
+    counter-increment: count 04;
+  }
+  80% {
+    counter-increment: count 05;
   }
   100% {
+    counter-increment: count 06;
+  }
+}
+@keyframes count7 {
+  0% {
+    counter-increment: count 00;
+  }
+  15% {
     counter-increment: count 01;
+  }
+  30% {
+    counter-increment: count 02;
+  }
+  45% {
+    counter-increment: count 03;
+  }
+  60% {
+    counter-increment: count 04;
+  }
+  73% {
+    counter-increment: count 05;
+  }
+  88% {
+    counter-increment: count 06;
+  }
+  100% {
+    counter-increment: count 07;
   }
 }

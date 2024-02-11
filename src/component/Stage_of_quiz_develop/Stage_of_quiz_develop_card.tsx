@@ -15,6 +15,7 @@ export default function Stage_of_quiz_develop_card({
   styleName,
 }: cardInterface) {
   const [state, setState] = useState(false)
+  const styleCount = 
   console.log(styleName);
   
   return (
@@ -23,7 +24,7 @@ export default function Stage_of_quiz_develop_card({
     onMouseLeave={e=> setState(false)}>
    
       <div className={style.card_count}>
-        <div className={state ? style.number + " " + styleName : style.number}>0</div>
+        <div className={state ? style.number + " " + `${styleName}` : style.number}>0</div>
       </div>
 
       <div className={style.card_label}>{name}</div>
