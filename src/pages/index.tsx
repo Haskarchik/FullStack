@@ -13,10 +13,13 @@ import Why_cooperate_with_us from "@/component/Why_cooperate_with_us/Why_coopera
 import What_you_get from "@/component/What_you_get/What_you_get";
 import What_do_SEO from "@/component/What_do_SEO/What_do_SEO";
 import Stage_of_quiz_develop from "@/component/Stage_of_quiz_develop/Stage_of_quiz_develop";
+import Blog from "@/component/Blog/Blog";
 
 export default function Home() {
   return (
-    <main>
+    <main>  <section>
+    <Blog/>
+  </section>
       <section>
         <What_do_SEO />
       </section>
@@ -40,10 +43,10 @@ export default function Home() {
       </section>
       <section>
         <How_we_work />
-      </section>{" "}
+      </section>
       <section>
         <Tehnology />
-      </section>{" "}
+      </section>
       <section>
         <What_sites_we_develop />
       </section>
